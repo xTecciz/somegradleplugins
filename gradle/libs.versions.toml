@@ -1,0 +1,8 @@
+[versions]
+agp = "8.5.2"
+kotlin = "2.1.0"
+
+[libraries]
+###### Gradle plugins
+kotlinGradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
