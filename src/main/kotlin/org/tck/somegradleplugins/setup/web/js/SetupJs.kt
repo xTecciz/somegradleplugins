@@ -1,4 +1,4 @@
-package org.tck.gradle.setup.web.js
+package org.tck.somegradleplugins.setup.web.js
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

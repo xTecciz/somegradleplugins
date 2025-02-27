@@ -1,4 +1,4 @@
-package org.tck.gradle
+package org.tck.somegradleplugins
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project

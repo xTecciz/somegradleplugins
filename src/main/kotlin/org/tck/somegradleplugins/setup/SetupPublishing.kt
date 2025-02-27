@@ -1,4 +1,4 @@
-package org.tck.gradle.setup
+package org.tck.somegradleplugins.setup
 
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Project
@@ -21,10 +21,10 @@ import org.gradle.plugins.signing.Sign
 import org.gradle.plugins.signing.SigningExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
-import org.tck.gradle.public_config.PublicationConfig
-import org.tck.gradle.utils.Compilations
-import org.tck.gradle.utils.hasExtension
-import org.tck.gradle.utils.multiplatformExtension
+import org.tck.somegradleplugins.public_config.PublicationConfig
+import org.tck.somegradleplugins.utils.Compilations
+import org.tck.somegradleplugins.utils.hasExtension
+import org.tck.somegradleplugins.utils.multiplatformExtension
 
 fun Project.setupPublication() {
     val config = requireDefaults<PublicationConfig>()

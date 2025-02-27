@@ -1,4 +1,4 @@
-package org.tck.gradle.source_sets
+package org.tck.somegradleplugins.source_sets
 
 import org.gradle.api.NamedDomainObjectCollection
 import org.gradle.api.NamedDomainObjectContainer
@@ -36,12 +36,18 @@ internal class DefaultMultiplatformSourceSets(
 
     override val javaSet: Set<SourceSetBundle> =
         targets
-            .filter { it.platformType in setOf(KotlinPlatformType.androidJvm, KotlinPlatformType.jvm) }
+            .filter {
+                it.platformType in setOf(
+                    KotlinPlatformType.androidJvm,
+                    KotlinPlatformType.jvm
+                )
+            }
             .toSourceSetBundles()
 
     override val nativeSet: Set<SourceSetBundle> = nativeSourceSets()
     override val linuxSet: Set<SourceSetBundle> = nativeSourceSets(Family.LINUX)
-    override val darwinSet: Set<SourceSetBundle> = nativeSourceSets(Family.IOS, Family.OSX, Family.WATCHOS, Family.TVOS)
+    override val darwinSet: Set<SourceSetBundle> =
+        nativeSourceSets(Family.IOS, Family.OSX, Family.WATCHOS, Family.TVOS)
     override val iosSet: Set<SourceSetBundle> = nativeSourceSets(Family.IOS)
     override val watchosSet: Set<SourceSetBundle> = nativeSourceSets(Family.WATCHOS)
     override val tvosSet: Set<SourceSetBundle> = nativeSourceSets(Family.TVOS)

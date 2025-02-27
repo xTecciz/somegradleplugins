@@ -1,4 +1,4 @@
-package org.tck.gradle.setup.mobile.ios
+package org.tck.somegradleplugins.setup.mobile.ios
 
 import org.gradle.api.Project
 

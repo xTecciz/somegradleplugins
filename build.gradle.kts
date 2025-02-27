@@ -30,7 +30,7 @@ dependencies {
 gradlePlugin {
     plugins.create(project.name) {
         id = "org.tck.gradleconfig"
-        implementationClass = "org.tck.gradle.GradleSetupPlugin"
+        implementationClass = "org.tck.somegradleplugins.GradleSetupPlugin"
     }
 }
 

@@ -1,4 +1,4 @@
-package org.tck.gradle.setup
+package org.tck.somegradleplugins.setup
 
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
@@ -7,15 +7,15 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinAndroidTarget
 import org.jetbrains.kotlin.gradle.targets.jvm.KotlinJvmTarget
-import org.tck.gradle.public_config.MultiplatformConfigurator
-import org.tck.gradle.setup.mobile.android.setupAndroidCommon
-import org.tck.gradle.source_sets.DefaultMultiplatformSourceSets
-import org.tck.gradle.source_sets.MultiplatformSourceSets
-import org.tck.gradle.utils.EnabledTarget
-import org.tck.gradle.utils.configureExtension
-import org.tck.gradle.utils.disableCompilationsOfNeeded
-import org.tck.gradle.utils.isMultiplatformTargetEnabled
-import org.tck.gradle.utils.multiplatformExtension
+import org.tck.somegradleplugins.setup.mobile.android.setupAndroidCommon
+import org.tck.somegradleplugins.source_sets.DefaultMultiplatformSourceSets
+import org.tck.somegradleplugins.source_sets.MultiplatformSourceSets
+import org.tck.somegradleplugins.public_config.MultiplatformConfigurator
+import org.tck.somegradleplugins.utils.EnabledTarget
+import org.tck.somegradleplugins.utils.configureExtension
+import org.tck.somegradleplugins.utils.disableCompilationsOfNeeded
+import org.tck.somegradleplugins.utils.isMultiplatformTargetEnabled
+import org.tck.somegradleplugins.utils.multiplatformExtension
 
 fun Project.setupMultiplatform(
     targets: MultiplatformConfigurator = requireDefaults(),

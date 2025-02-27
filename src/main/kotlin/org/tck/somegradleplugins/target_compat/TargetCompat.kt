@@ -1,4 +1,4 @@
-package org.tck.gradle.target_compat
+package org.tck.somegradleplugins.target_compat
 
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
@@ -12,12 +12,18 @@ fun KotlinMultiplatformExtension.jvmCompat(name: String? = DEFAULT_TARGET_NAME) 
 }
 
 fun KotlinMultiplatformExtension.jsCompat(name: String? = DEFAULT_TARGET_NAME) {
-    enableTarget(name = name, enableDefault = { js { browser() } }, enableNamed = { js(it) { browser() } })
+    enableTarget(
+        name = name,
+        enableDefault = { js { browser() } },
+        enableNamed = { js(it) { browser() } })
 }
 
 @OptIn(ExperimentalWasmDsl::class)
 fun KotlinMultiplatformExtension.wasmCompat(name: String? = DEFAULT_TARGET_NAME) {
-    enableTarget(name = name, enableDefault = { wasmJs { browser() } }, enableNamed = { wasmJs(it) { browser() } })
+    enableTarget(
+        name = name,
+        enableDefault = { wasmJs { browser() } },
+        enableNamed = { wasmJs(it) { browser() } })
 }
 
 fun KotlinMultiplatformExtension.iosCompat(
@@ -27,7 +33,10 @@ fun KotlinMultiplatformExtension.iosCompat(
 ) {
     enableTarget(name = x64, enableDefault = { iosX64() }, enableNamed = { iosX64(it) })
     enableTarget(name = arm64, enableDefault = { iosArm64() }, enableNamed = { iosArm64(it) })
-    enableTarget(name = simulatorArm64, enableDefault = { iosSimulatorArm64() }, enableNamed = { iosSimulatorArm64(it) })
+    enableTarget(
+        name = simulatorArm64,
+        enableDefault = { iosSimulatorArm64() },
+        enableNamed = { iosSimulatorArm64(it) })
 }
 
 fun KotlinMultiplatformExtension.watchosCompat(
@@ -38,10 +47,22 @@ fun KotlinMultiplatformExtension.watchosCompat(
     deviceArm64: String? = DEFAULT_TARGET_NAME,
 ) {
     enableTarget(name = x64, enableDefault = { watchosX64() }, enableNamed = { watchosX64(it) })
-    enableTarget(name = arm32, enableDefault = { watchosArm32() }, enableNamed = { watchosArm32(it) })
-    enableTarget(name = arm64, enableDefault = { watchosArm64() }, enableNamed = { watchosArm64(it) })
-    enableTarget(name = simulatorArm64, enableDefault = { watchosSimulatorArm64() }, enableNamed = { watchosSimulatorArm64(it) })
-    enableTarget(name = deviceArm64, enableDefault = { watchosDeviceArm64() }, enableNamed = { watchosDeviceArm64(it) })
+    enableTarget(
+        name = arm32,
+        enableDefault = { watchosArm32() },
+        enableNamed = { watchosArm32(it) })
+    enableTarget(
+        name = arm64,
+        enableDefault = { watchosArm64() },
+        enableNamed = { watchosArm64(it) })
+    enableTarget(
+        name = simulatorArm64,
+        enableDefault = { watchosSimulatorArm64() },
+        enableNamed = { watchosSimulatorArm64(it) })
+    enableTarget(
+        name = deviceArm64,
+        enableDefault = { watchosDeviceArm64() },
+        enableNamed = { watchosDeviceArm64(it) })
 }
 
 fun KotlinMultiplatformExtension.tvosCompat(
@@ -51,7 +72,10 @@ fun KotlinMultiplatformExtension.tvosCompat(
 ) {
     enableTarget(name = x64, enableDefault = { tvosX64() }, enableNamed = { tvosX64(it) })
     enableTarget(name = arm64, enableDefault = { tvosArm64() }, enableNamed = { tvosArm64(it) })
-    enableTarget(name = simulatorArm64, enableDefault = { tvosSimulatorArm64() }, enableNamed = { tvosSimulatorArm64(it) })
+    enableTarget(
+        name = simulatorArm64,
+        enableDefault = { tvosSimulatorArm64() },
+        enableNamed = { tvosSimulatorArm64(it) })
 }
 
 fun KotlinMultiplatformExtension.macosCompat(

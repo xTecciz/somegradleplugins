@@ -1,11 +1,11 @@
-package org.tck.gradle.setup
+package org.tck.somegradleplugins.setup
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.extra
-import org.tck.gradle.public_config.AndroidConfig
-import org.tck.gradle.public_config.AppleConfig
-import org.tck.gradle.public_config.MultiplatformConfigurator
-import org.tck.gradle.public_config.PublicationConfig
+import org.tck.somegradleplugins.public_config.AndroidConfig
+import org.tck.somegradleplugins.public_config.AppleConfig
+import org.tck.somegradleplugins.public_config.MultiplatformConfigurator
+import org.tck.somegradleplugins.public_config.PublicationConfig
 
 fun Project.setupDefaults(
     multiplatformConfigurator: MultiplatformConfigurator? = null,

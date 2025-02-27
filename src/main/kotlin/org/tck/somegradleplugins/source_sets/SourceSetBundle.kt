@@ -1,4 +1,4 @@
-package org.tck.gradle.source_sets
+package org.tck.somegradleplugins.source_sets
 
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 

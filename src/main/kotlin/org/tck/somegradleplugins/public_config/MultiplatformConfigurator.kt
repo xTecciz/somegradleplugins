@@ -1,4 +1,4 @@
-package org.tck.gradle.public_config
+package org.tck.somegradleplugins.public_config
 
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 

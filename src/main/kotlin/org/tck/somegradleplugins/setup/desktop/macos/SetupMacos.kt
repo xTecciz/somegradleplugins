@@ -1,10 +1,10 @@
-package org.tck.gradle.setup.desktop.macos
+package org.tck.somegradleplugins.setup.desktop.macos
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import org.tck.gradle.public_config.AppleConfig
-import org.tck.gradle.setup.requireDefaults
+import org.tck.somegradleplugins.setup.requireDefaults
+import org.tck.somegradleplugins.public_config.AppleConfig
 
 fun Project.setupMacOs() {
     setupMacOsTargets(requireDefaults())

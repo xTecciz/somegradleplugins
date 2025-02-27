@@ -1,4 +1,4 @@
-package org.tck.gradle.setup.desktop.jvm
+package org.tck.somegradleplugins.setup.desktop.jvm
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

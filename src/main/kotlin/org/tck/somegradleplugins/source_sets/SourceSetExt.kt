@@ -1,4 +1,4 @@
-package org.tck.gradle.source_sets
+package org.tck.somegradleplugins.source_sets
 
 operator fun SourceSetBundle.plus(other: SourceSetBundle): Set<SourceSetBundle> =
     this + setOf(other)

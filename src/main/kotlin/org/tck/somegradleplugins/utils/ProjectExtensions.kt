@@ -1,4 +1,4 @@
-package org.tck.gradle.utils
+package org.tck.somegradleplugins.utils
 
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.Project

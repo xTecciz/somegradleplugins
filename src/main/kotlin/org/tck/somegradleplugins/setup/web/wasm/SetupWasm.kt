@@ -1,4 +1,4 @@
-package org.tck.gradle.setup.web.wasm
+package org.tck.somegradleplugins.setup.web.wasm
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

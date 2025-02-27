@@ -1,4 +1,4 @@
-package org.tck.gradle.utils
+package org.tck.somegradleplugins.utils
 
 import org.gradle.internal.os.OperatingSystem
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension

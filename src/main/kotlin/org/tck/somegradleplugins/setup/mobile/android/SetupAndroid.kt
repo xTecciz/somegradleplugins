@@ -1,4 +1,4 @@
-package org.tck.gradle.setup.mobile.android
+package org.tck.somegradleplugins.setup.mobile.android
 
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
@@ -8,9 +8,9 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.tck.gradle.public_config.AndroidConfig
-import org.tck.gradle.setup.requireDefaults
-import org.tck.gradle.utils.configureNamespace
+import org.tck.somegradleplugins.setup.requireDefaults
+import org.tck.somegradleplugins.public_config.AndroidConfig
+import org.tck.somegradleplugins.utils.configureNamespace
 
 fun Project.setupAndroidLibrary() {
     setupAndroid(requireDefaults())
