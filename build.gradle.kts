@@ -44,13 +44,22 @@ val javadocJar by tasks.registering(Jar::class) {
     from(tasks.named("javadoc"))
 }
 
+//publishing {
+//    publications {
+//        create<MavenPublication>("maven") {
+//            from(components["java"])
+//            groupId = "com.github.xTecciz"
+//            artifactId = "somegradleplugins"
+//            version = "0.0.1"
+//        }
+//    }
+//}
+
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            from(components["java"])
-            groupId = "com.github.xTecciz"
-            artifactId = "somegradleplugins"
-            version = "0.0.1"
+    repositories {
+        maven {
+            name = "jitpack"
+            url = uri("https://jitpack.io")
         }
     }
 }

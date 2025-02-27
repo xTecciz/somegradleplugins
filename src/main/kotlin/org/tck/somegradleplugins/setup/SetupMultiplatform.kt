@@ -11,6 +11,9 @@ import org.tck.somegradleplugins.setup.mobile.android.setupAndroidCommon
 import org.tck.somegradleplugins.source_sets.DefaultMultiplatformSourceSets
 import org.tck.somegradleplugins.source_sets.MultiplatformSourceSets
 import org.tck.somegradleplugins.public_config.MultiplatformConfigurator
+import org.tck.somegradleplugins.setup.desktop.macos.setupMacosCommon
+import org.tck.somegradleplugins.setup.mobile.ios.setupIosCommon
+import org.tck.somegradleplugins.utils.Compilations
 import org.tck.somegradleplugins.utils.EnabledTarget
 import org.tck.somegradleplugins.utils.configureExtension
 import org.tck.somegradleplugins.utils.disableCompilationsOfNeeded
@@ -40,6 +43,14 @@ fun Project.setupMultiplatform(
 
     if (isMultiplatformTargetEnabled(EnabledTarget.ANDROID)) {
         setupAndroidCommon(requireDefaults())
+    }
+
+    if (isMultiplatformTargetEnabled(EnabledTarget.IOS)) {
+        setupIosCommon(requireDefaults())
+    }
+
+    if (isMultiplatformTargetEnabled(EnabledTarget.MACOS)) {
+        setupMacosCommon(requireDefaults())
     }
 
     configureExtension<JavaPluginExtension> {
